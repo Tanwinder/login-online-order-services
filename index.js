@@ -9,7 +9,9 @@ const houseInventory = require('./routes/houseInventory')
 dotenv.config();
 
 const app = express();
-
+app.get('/testing', (req, res) => {
+    res.status(200).send("app up and running")
+})
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
