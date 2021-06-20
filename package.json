@@ -8,6 +8,10 @@
     "debug": "nodemon --inspect index.js",
     "start": "node index.js"
   },
+  "engines": {
+    "node": "12.16.2",
+    "npm": "6.14.4"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -4,15 +4,29 @@ const { Schema, model } = mongoose;
 
 
 const BuyNow = new Schema({
-    orders: [{ 
-        title: String,
-        _id: String,
-        desc: {
-            type: String,
-            default: "testing project"
+    couponUsed: Boolean,
+    customer: {
+        gender: String,
+        age: Number,
+        email: String,
+        satisfaction: Number
+    },
+    items: [{
+        name: String,
+        tags: [String],
+        price: {
+            numberDecimal: String
         },
-        price: Number
-     }]
+        quantity: Number
+    }],
+    purchaseMethod: String,
+    saleDate: {
+        type: Date
+    },
+    storeLocation: String,
+    _id: String
 });
+
+
 
 module.exports = model('BuyNow', BuyNow);
